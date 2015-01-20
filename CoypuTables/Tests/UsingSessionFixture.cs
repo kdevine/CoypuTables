@@ -6,7 +6,7 @@ namespace CoypuTables.Tests
 {
     public class UsingSessionFixture : IUseFixture<SessionFixture>
     {
-        protected Session session;
+        protected BrowserSession session;
 
         public void SetFixture(SessionFixture fixture)
         {

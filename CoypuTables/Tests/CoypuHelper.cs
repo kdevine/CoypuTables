@@ -1,16 +1,18 @@
 using Coypu;
+using Coypu.Drivers;
 using Coypu.Drivers.Watin;
 
 namespace CoypuTables.Tests
 {
     public static class CoypuHelper
     {
-        public static Session GetNewWatinSession()
-        {
-            Configuration.Driver = typeof(WatiNDriver);
-            Configuration.Browser = Coypu.Drivers.Browser.InternetExplorer;
+        public static BrowserSession GetNewSession() {
+            return new BrowserSession();
+        }
 
-            return Browser.NewSession();
+        public static BrowserSession GetNewWatinSession() {
+          var n = new WatiNDriver(Browser.InternetExplorer);
+          return new BrowserSession(n);
         }
     }
 }

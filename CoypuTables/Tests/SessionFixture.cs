@@ -15,7 +15,7 @@ namespace CoypuTables.Tests
             Console.WriteLine("Starting session: {0}", stopwatch.Elapsed);
         }
 
-        public Session Session { get; private set; }
+        public BrowserSession Session { get; private set; }
 
         public void VisitFile(string htmlPath)
         {

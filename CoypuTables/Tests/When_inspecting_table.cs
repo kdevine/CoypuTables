@@ -1,7 +1,4 @@
-﻿using System;
-
-using Coypu;
-
+﻿using Coypu;
 using Xunit;
 
 namespace CoypuTables.Tests
